@@ -81,6 +81,10 @@ export default function DisplayProduct() {
     fetchProducts();
   }, []);
 
+  if (loading) {
+    return <div>Loading...</div>; // Display loading state
+  }
+
   // Filter products based on search query
   const handleSearch = (query: string) => {
     if (query) {
